@@ -1,0 +1,14 @@
+﻿@using(Html.BeginForm("Acrescentar", "Pedidos"))
+{
+    <input type="text" name="produto" />
+    <input type="submit" id="acrescentar" value="Acrescentar" />
+}
+<ul>
+@if (ViewBag.Pedido != null)
+{
+    foreach (var produto in ViewBag.Pedido)
+    {
+        <li>@produto</li>
+    }
+}
+</ul>
